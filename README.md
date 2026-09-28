@@ -33,16 +33,6 @@ Les colonnes `idCours` et `derniereMiseAJour` sont exclues de l'ACP (identifiant
 4. **Validation croisée de méthode** : comparaison des projections obtenues par `sklearn` et par une décomposition SVD manuelle (`numpy.linalg.svd`), avec réalignement des signes (ambiguïté de signe inhérente à la SVD/ACP).
 5. **Interprétation** : cercle des corrélations et lecture des variables les mieux représentées sur chaque axe.
 
-
-
-## Technologies utilisées
-
-Python · Pandas · NumPy · Scikit-learn · Matplotlib
-
-## Pistes d'amélioration
-
-- Ajouter un biplot combinant individus et variables sur un même graphique.
-
 ## Auteur
 
 Lilian Nkwemfo
