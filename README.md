@@ -14,21 +14,21 @@ Le jeu de données (`my_courses.csv`) contient 19 cours décrits par les variabl
 
 | Variable | Description |
 |---|---|
-| `inscription` | Nombre de jours écoulés depuis l'inscription au cours |
-| `progression` | Progression sur le cours (%) |
-| `moyenneDeClasse` | Moyenne de la classe aux évaluations (%) |
-| `duree` | Durée estimée du cours (heures) |
-| `difficulte` | Difficulté estimée (1 = facile, 3 = difficile) |
-| `nbChapitres` | Nombre de chapitres |
-| `nbEvaluations` | Nombre d'évaluations (quiz + activités) |
-| `ratioQuizEvaluation` | Proportion de quiz parmi les évaluations |
+| inscription | Nombre de jours écoulés depuis l'inscription au cours |
+| progression | Progression sur le cours (%) |
+| moyenneDeClasse | Moyenne de la classe aux évaluations (%) |
+| duree | Durée estimée du cours (heures) |
+| difficulte | Difficulté estimée (1 = facile, 3 = difficile) |
+| nbChapitres | Nombre de chapitres |
+| nbEvaluations | Nombre d'évaluations (quiz + activités) |
+| ratioQuizEvaluation | Proportion de quiz parmi les évaluations |
 
 Les colonnes `idCours` et `derniereMiseAJour` sont exclues de l'ACP (identifiant et date, non pertinents pour l'analyse de variance).
 
 ## Méthodologie
 
 1. **Nettoyage** : traitement des valeurs manquantes (remplacement par la moyenne), vérification des doublons.
-2. **Standardisation** : mise à l'échelle des variables (`StandardScaler`) avant ACP, les variables étant sur des échelles hétérogènes.
+2. **Standardisation** : mise à l'échelle des variables (StandardScaler) avant ACP, les variables étant sur des échelles hétérogènes.
 3. **ACP** : décomposition via `sklearn.decomposition.PCA`, choix de 6 composantes retenant 95,6 % de la variance totale.
 4. **Validation croisée de méthode** : comparaison des projections obtenues par `sklearn` et par une décomposition SVD manuelle (`numpy.linalg.svd`), avec réalignement des signes (ambiguïté de signe inhérente à la SVD/ACP).
 5. **Interprétation** : cercle des corrélations et lecture des variables les mieux représentées sur chaque axe.
