@@ -45,4 +45,4 @@ Python · Pandas · NumPy · Scikit-learn · Matplotlib
 
 ## Auteur
 
-Lilian Tchami
+Lilian Nkwemfo
